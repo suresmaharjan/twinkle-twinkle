@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+.img-responsive{
+    width:100vw;
+    height:100vh;
+    /* transform: scale(2); */
+    object-fit: cover;
+}
+
+/** HOMEPAGE **/
+
+.hp{
+    position: relative;
+    color:#fff;
+    pointer-events: none;
+}
+.vertical-loop{
+    position: absolute;
+    top:50%;
+    transform: translateY(100%);
+    width: 100%;
+    text-transform: uppercase;
+    overflow: hidden;
+    pointer-events: none;
+    
+}
+
+/* .textLoop{
+    width: 100%;
+}
+
+.textLoop > div > div{
+    left:50% !important;
+    transform: translateX(-50%) !important;
+} */
+
+
+/* SLICK INITIALIZATION */
+.bgHolder{
+    width: 100%;
+    text-align: center;
+    font-size: 72px;
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: 400;
+    overflow: hidden;
+    line-height: 1;
+    letter-spacing: 30px;
+}
+
+.slick-slide:not(.slick-active){
+    /* opacity:0; */
+}
+
+.clouds{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+    display: flex;
+    align-items: center;
+}
+
+.clouds img{
+    max-width: 650px;
+}
+
+.cloud1{
+    position: absolute;
+    top: calc(50% - 1/4 vh);
+    left: 0;
+    animation:animateCloud 1000s linear infinite;
+    /* transform: translateY(-50%); */
+}
+.cloud2{
+    position: absolute;
+    top: calc(50% - 1/4 vh);
+    left: 0;
+    animation:animateCloud 100s linear infinite;
+    /* transform: translateY(-50%); */
+}
+
+@keyframes animateCloud{
+    0%{
+        transform:translateX(0%) scale(.8)
+    }
+    
+    100%{
+        transform:translateX(200%) scale(1.5)
+
+    }
+}
